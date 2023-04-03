@@ -6,8 +6,8 @@ import (
 )
 
 var exampleUsage = `
-# init for projects
-tpctl init -f config.yaml
+# chat with chatgpt
+chatgpt completion -k apiKey -p ip:port  -m 你好
 `
 
 func main() {
