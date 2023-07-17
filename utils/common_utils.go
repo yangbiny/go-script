@@ -13,12 +13,13 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:        "utils",
-		Short:      "A Command for Common utils",
+		Short:      "常用工具，各种转换工具的实现",
 		Example:    exampleUsage,
-		SuggestFor: []string{"file"},
+		SuggestFor: []string{""},
 	}
 
 	rootCmd.AddCommand(utils.FileCommand())
+	rootCmd.AddCommand(utils.ArmeriaDebugCommand())
 	if err := rootCmd.Execute(); err != nil {
 		panic(err)
 	}

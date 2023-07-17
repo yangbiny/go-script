@@ -15,6 +15,8 @@ import (
 
 var cols = []string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}
 
+// utils csv2excel -c /Users/reasonknow/Desktop/test.csv -e /Users/reasonknow/Desktop/test.xlsx -s ',&'
+
 func FileCommand() *cobra.Command {
 	var separator string
 	var csvReadPath string
