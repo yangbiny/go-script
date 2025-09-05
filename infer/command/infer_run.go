@@ -60,12 +60,9 @@ func runInfer(projectPath string, projectName string, onlyAnalyze bool) {
 	// 执行 infer 命令
 	var inferOutDir = "/Users/knowreason/soft/infer/out/" + projectName
 	stat, err := os.Stat(inferOutDir)
-	if err != nil {
-		panic("The infer output path is not valid, please check it. : " + inferOutDir)
-	}
-
 	if !onlyAnalyze {
-		if stat.IsDir() {
+		// 如果他存在，并且是目录
+		if err == nil && stat.IsDir() {
 			filePath := inferOutDir
 			err := exec.Command("rm", "-rf", filePath).Run()
 			if err != nil {
