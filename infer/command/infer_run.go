@@ -98,6 +98,7 @@ func runInfer(projectPath string, projectName string, onlyAnalyze bool) {
 	if err = cmd.Run(); err != nil {
 		panic("Execute infer analyze command failed: " + err.Error())
 	}
+	fmt.Println("Infer analysis completed. See more execute : infer -o " + inferOutDir + " explore")
 }
 
 var defaultParams = []string{
