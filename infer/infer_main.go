@@ -14,5 +14,6 @@ func main() {
 		SuggestFor: []string{""},
 	}
 	rootCmd.AddCommand(infer.RunInfer())
+	rootCmd.AddCommand(infer.RunDiffInfer())
 	rootCmd.Execute()
 }
