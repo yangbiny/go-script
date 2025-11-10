@@ -147,7 +147,7 @@ func runInfer(projectPath string, projectName string, onlyAnalyze bool, onlyCapt
 		//command := exec.Command("infer",, defaultParams, )
 		command := exec.Command("infer",
 			append(
-				[]string{"--java-version", "17", "capture", "-o", inferOutDir, "--", "mvn", "clean", "compile", "-DskipTests=true"},
+				[]string{"--java-version", "17", "capture", "-o", inferOutDir, "--", "mvn", "clean", "compile", "-U", "-T", "4C", "-DskipTests=true"},
 			)...,
 		)
 		command.Dir = fullPath
